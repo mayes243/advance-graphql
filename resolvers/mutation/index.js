@@ -48,4 +48,16 @@ export const Mutation = {
 
     return newReview;
   },
+  deleteCategory: (parent, { id }, { allCategories, allProducts }) => {
+    allCategories = allCategories.filter((category) => category.id !== id);
+    allProducts = allProducts.map((product) => {
+      if (product.categoryId === id)
+        return {
+          ...product,
+          categoryId: null,
+        };
+      else return product;
+    });
+    return true;
+  },
 };
