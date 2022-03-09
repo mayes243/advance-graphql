@@ -60,4 +60,27 @@ export const Mutation = {
     });
     return true;
   },
+  deleteProduct: (parent, { id }, { allProducts, reviews }) => {
+    allProducts = allProducts.filter((product) => product.id !== id);
+    reviews = reviews.filter((review) => review.productId !== id);
+    return true;
+  },
+  updateCategory: (parent, { id, input }, { allCategories }) => {
+    const index = allCategories.findIndex((category) => category.id === id);
+    if (index === -1) return null;
+    allCategories[index] = {
+      ...allCategories[index],
+      ...input,
+    };
+    return allCategories[index];
+  },
+  updateProduct: (parent, { id, input }, { allProducts }) => {
+    const index = allProducts.findIndex((product) => product.id === id);
+    if (index === -1) return null;
+    allProducts[index] = {
+      ...allProducts[index],
+      ...input,
+    };
+    return allProducts[index];
+  },
 };
