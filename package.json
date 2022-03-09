@@ -1,0 +1,16 @@
+{
+  "name": "modern-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.3",
+    "uuidv4": "^6.2.12"
+  }
+}
