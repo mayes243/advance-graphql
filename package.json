@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "",
+  "author": "Ma Ýes",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^3.6.3",
