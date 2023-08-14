@@ -1,8 +1,12 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/server.js"
-    }
-  ]
+  "build": {
+    "target": "node",
+    "command": "npm run build"
+  },
+  "functions": {
+    "include": ["./**/*.js"]
+  },
+  "routes": {
+    "/*": "server.js"
+  }
 }
