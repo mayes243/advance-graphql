@@ -23,6 +23,11 @@ const server = new ApolloServer({
     allCategories,
     reviews,
   },
+  playground: true,
+  cors: {
+    origin: "*",
+    credentials: true,
+  },
 });
 
 const port = process.env.PORT || 4000;
