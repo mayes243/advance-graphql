@@ -1,6 +1,6 @@
 import { ApolloServer } from "apollo-server";
 
-import { Query } from "./resolvers/Query/index.js";
+import { Query } from "./resolvers/query/index.js";
 import { CategoryList } from "./resolvers/category/index.js";
 import { ProductList } from "./resolvers/product/index.js";
 import { Mutation } from "./resolvers/mutation/index.js";
