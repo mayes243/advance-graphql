@@ -6,5 +6,10 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [{ "src": "server.js", "dest": "/api/graphql" }]
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
 }
