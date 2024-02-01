@@ -26,7 +26,7 @@ const server = new ApolloServer({
 });
 
 const port = process.env.PORT || 4000;
-const path = "";
+const path = "api/graphql";
 
 server.listen({ port, path }).then(({ url }) => {
   console.log(`Server is up at ${url}${path} 🚀🚀🚀🚀`);
