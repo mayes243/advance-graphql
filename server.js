@@ -23,7 +23,7 @@ const server = new ApolloServer({
     allCategories,
     reviews,
   },
-  playground: true,
+  introspection: true,
   cors: {
     origin: "*",
     credentials: true,
